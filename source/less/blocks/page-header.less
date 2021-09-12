@@ -1,4 +1,13 @@
+
 .page-header {
+  display: flex;
+  flex-direction: column;
   background: #000000;
-  opacity: 0.3;
+
+  @media (min-width: @tablet-width) {
+    height: 110px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
 }

@@ -1,20 +1,28 @@
 .contacts__wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
 }
 
 .contacts__header {
   width: 70%;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: 300;
+  .sans-serif(300);
   font-size: 24px;
   line-height: 120%;
-  /* or 29px */
   text-align: center;
 
   color: #283645;
+
+  @media (min-width: @tablet-width) {
+    font-size: 40px;
+    line-height: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 50px;
+    line-height: 68px;
+  }
 }
 
 .contacts__paragraph {
@@ -25,19 +33,15 @@
 }
 
 .contacts__info {
-font-family: Open Sans;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 25px;
+  .sans-serif(bold);
+  font-size: 18px;
+  line-height: 25px;
 
-color: #283645;
+  color: #283645;
 }
 
 .contacts__text {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: 300;
+  .sans-serif(300);
   font-size: 24px;
   line-height: 33px;
   display: flex;
@@ -45,4 +49,26 @@ color: #283645;
   text-align: center;
 
   color: #D22856;
+}
+
+.contacts__map {
+  background: url("../../img/triangle-footer.png") top -180px center no-repeat,
+  url("../../img/map.png") center no-repeat;
+  width: 100%;
+  background-size: cover;
+  height: 250px;
+
+  @media (min-width: @tablet-width) {
+    background: url("../../img/triangle-footer.png") top -250px center no-repeat,
+    url("../../img/map.png") center no-repeat;
+    background-size: cover;
+    height: 380px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 505px;
+    background: url("../../img/triangle-footer.png") top -300px center no-repeat,
+    url("../../img/map.png") center no-repeat;
+    background-size: cover;
+  }
 }

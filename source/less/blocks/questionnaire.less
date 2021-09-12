@@ -3,13 +3,10 @@
 }
 
 .questionnaire__question {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
+  .sans-serif(normal);
   font-size: 14px;
   line-height: 18px;
   padding: 20px 40px;
-  /* or 129% */
 
   display: flex;
   align-items: center;
@@ -25,7 +22,7 @@
   opacity: 0;
 }
 
-.questionnaire__item-checkbox+div::before {
+.questionnaire__item-checkbox + div::before {
   content: '';
   display: inline-block;
   width: 35px;
@@ -33,22 +30,18 @@
   flex-shrink: 0;
   flex-grow: 0;
   border: 2px solid #E5E5E5;
-  background: #FFFFFF;
+  background: #FFFFFF  center center no-repeat;
   border-radius: 50%;
-  background-repeat: no-repeat;
-  background-position: center center;
   background-size: 50% 50%;
   margin: 0 30px 30px 15px;
 }
 
-.questionnaire__item-checkbox:checked+div::before {
+.questionnaire__item-checkbox:checked + div::before {
   background-image: url(../../img/Ellipse-small.svg);
 }
 
 .questionnaire__item-description {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
+  .sans-serif(normal);
   font-size: 18px;
   line-height: 30px;
   display: flex;
