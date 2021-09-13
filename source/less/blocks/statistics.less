@@ -1,15 +1,27 @@
 .statistics {
+  @media (min-width: @tablet-width) {
+    background-color: #ffffff;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: #f2f2f2;
+  }
+}
+
+.statistics__wrapper {
   display: none;
+
   @media (min-width: @tablet-width) {
     display: flex;
     align-items: center;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     padding-top: 40px;
   }
 
-
   @media (min-width: @desktop-width) {
-    background-color: #F2F2F2;
+    background-color: #f2f2f2;
+    width: 960px;
+    margin: 0 auto;
   }
 }
 
@@ -23,5 +35,5 @@
 }
 
 .statistics__link {
-  color: #D22856;
+  color: #d22856;
 }

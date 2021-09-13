@@ -3,6 +3,11 @@
   flex-direction: column;
   align-items: center;
   margin-top: 60px;
+
+  @media (min-width: @desktop-width) {
+    width: 960px;
+    margin: 0 auto;
+  }
 }
 
 .contacts__header {
@@ -48,27 +53,24 @@
   align-items: center;
   text-align: center;
 
-  color: #D22856;
+  color: #d22856;
 }
 
 .contacts__map {
-  background: url("../../img/triangle-footer.png") top -180px center no-repeat,
-  url("../../img/map.png") center no-repeat;
+  background: url("../img/triangle-footer.png") top -180px center no-repeat, url("../img/map.png") center no-repeat;
   width: 100%;
   background-size: cover;
   height: 250px;
 
   @media (min-width: @tablet-width) {
-    background: url("../../img/triangle-footer.png") top -250px center no-repeat,
-    url("../../img/map.png") center no-repeat;
+    background: url("../img/triangle-footer.png") top -250px center no-repeat, url("../img/map.png") center no-repeat;
     background-size: cover;
     height: 380px;
   }
 
   @media (min-width: @desktop-width) {
     height: 505px;
-    background: url("../../img/triangle-footer.png") top -300px center no-repeat,
-    url("../../img/map.png") center no-repeat;
+    background: url("../img/triangle-footer.png") top -300px center no-repeat, url("../img/map.png") center no-repeat;
     background-size: cover;
   }
 }
