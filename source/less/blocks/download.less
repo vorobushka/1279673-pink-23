@@ -1,58 +1,123 @@
+.download {
+  background-image: url("../img/back-mobile.png");
+  background-color: #283645;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/back-tablet.svg");
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/back-desktop.svg");
+  }
+}
+
+.download__wrapper {
+  display: grid;
+  padding: 30px 0 0 0;
+
+  @media (min-width: @tablet-width) {
+    grid-template-areas: "post-0 post-3 post-2 post-2" "post-0 post-1 post-2 post-2";
+    grid-template-columns: 100px 300px 300px auto;
+    min-height: 545px;
+    padding: 30px 20px 0 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
+
 .download__slogan {
-    font-family: Open Sans;
-    font-style: normal;
+  .sans-serif(300);
+  font-size: 24px;
+  line-height: 120%;
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
+  color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    grid-area: post-3;
+    height: 127px;
+    width: 200px;
     font-weight: 300;
-    font-size: 24px;
+    padding-left: 50px;
+    font-size: 40px;
     line-height: 120%;
-    height: 326px;
-    color: #FFFFFF;
-    background-image: url(../../img/phone.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-position-x: -50px;
     text-align: center;
   }
 
-  .download__links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #1D2631;
-    padding: 28px 0;
+  @media (min-width: @desktop-width) {
+    font-size: 50px;
+    line-height: 68px;
+
+    height: auto;
+    width: 300px;
+    padding: 0;
   }
+}
 
-  .download__inner {
-    display: flex;
-    align-items: baseline;
-    width: 70%;
-    justify-content: space-around;
-    padding: 28px 0;
+.download__phone {
+  background-image: url("../img/phone-group.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 340px;
+  background-position: bottom;
+
+  @media (min-width: @tablet-width) {
+    grid-area: post-2;
+    background-image: url("../img/phone-group.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
   }
+}
 
-  .download__button {
-    width: 280px;
-    height: 55px;
+.download__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1d2631;
+  padding: 28px 0;
 
-    border: 3px solid #FFFFFF;
-    box-sizing: border-box;
-    border-radius: 29px;
+  @media (min-width: @tablet-width) {
+    grid-area: post-1;
     background-color: inherit;
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 18px;
-    color: #FFFFFF;
+    padding: 0;
   }
+}
 
-  .download__info {
-    width: 70%;
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 24px;
-    color: #FFFFFF;
-    margin: 0;
-  }
+.download__inner {
+  display: flex;
+  align-items: baseline;
+  width: 70%;
+  justify-content: space-around;
+  padding: 28px 0;
+}
+
+.download__button {
+  width: 280px;
+  height: 55px;
+
+  border: 3px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 29px;
+  background-color: inherit;
+  .sans-serif(bold);
+  font-size: 18px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+.download__info {
+  width: 70%;
+  .sans-serif(normal);
+  font-size: 14px;
+  line-height: 24px;
+  color: #ffffff;
+  margin: 0;
+}

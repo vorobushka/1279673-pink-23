@@ -2,11 +2,12 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
-   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Пинк</title>
 </head>
 <body class="page__body">
 <header class="page-header">
+  <div class="page-header__wrapper">
   <a class="page-header__logo" href="#">
     <img class="page-header__logo-image" src="img/pink.svg" alt="логотип пинк" width="74" height="23">
   </a>
@@ -31,13 +32,16 @@
       </ul>
     </div>
   </nav>
+  </div>
 </header>
 <main class="page-main">
   <h2 class="visually-hidden">Приложение Пинк</h2>
   <section class="download">
-    <!-- <h2 class="visually-hidden">Загрузка приложения</h2> -->
+    <h2 class="visually-hidden">Загрузка приложения</h2>
     <div class="download__wrapper">
-      <div class="download__slogan">Взгляните на жизнь иначе!</div>
+      <h3 class="download__slogan">Взгляните на жизнь иначе!</h3>
+      <div class="download__phone">
+      </div>
       <div class="download__links">
       <button class="download__button">Скачать приложение</button>
       <div class="download__inner">
@@ -57,10 +61,14 @@
   <section class="advantages">
     <h2 class="visually-hidden">Преимущества</h2>
     <div class="advantages__wrapper">
-      <h2 class="advantages__slogan">Устали от серости мнегаполиса?</h2>
+      <div class="advantages__slogan-inner">
+      <h2 class="advantages__slogan">Устали от серости мегаполиса?</h2>
       <h2 class="advantages__slogan">Нам есть, что вам предложить!</h2>
+    </div>
+    <div class="advantages__list-inner">
       <dl class="advantages__list">
         <div class="advantages__item">
+          <img class="advantages__item-pic" src="./img/grey-screen.png" alt="серый скрин экрана">
           <dt class="advantages__title">Поднимает настроение</dt>
           <dd class="advantages__description">
             Предложение позволит вам победить
@@ -69,6 +77,7 @@
           </dd>
         </div>
         <div class="advantages__item">
+          <img class="advantages__item-pic" src="./img/pink-screen.png" alt="розовый скрин экрана">
           <dt class="advantages__title">Меняет мир вокруг</dt>
           <dd class="advantages__description">
             Сделайте снимок и украсьте его
@@ -77,6 +86,7 @@
           </dd>
         </div>
         <div class="advantages__item">
+          <img class="advantages__item-pic" src="./img/smile-screen.png" alt="скрин экрана со смайликом">
           <dt class="advantages__title">Заводит новых друзей</dt>
           <dd class="advantages__description">
             Ставьте лайки, комментируйте,
@@ -86,9 +96,23 @@
         </div>
       </dl>
       <div class="advantages__pic">
-        <img class="advantages__mobile-pic" src="./img/iphone3.svg" alt="альтернативный текст">
-        <img class="advantages__screen-pic" src="./img/iphonescreen-3.svg" alt="альтернативный текст">
+        <img class="advantages__mobile-pic" src="./img/group-2.png" alt="картинка телефона">
       </div>
+    </div>
+    </div>
+  </section>
+  <section class="statistics">
+    <div class="statistics__wrapper">
+    <div class="statistics__cloak">
+      <img class="statistics__pic-cloak" src="./img/cloak.png" alt="картинка часов">
+    </div>
+    <div class="statistics__info">
+    <h3 class="statistics__title">Эффект на 24 часа!</h3>
+    <p class="statistics__description">Британские ученые провели исследования
+      и доказали, что положительный эффект
+      от использования приложения длится целые сутки!</p>
+      <a class="statistics__link" href="#">Узнать больше об исследовании</a>
+    </div>
     </div>
   </section>
   <section class="reviews">
@@ -96,7 +120,8 @@
     <div class="reviews__wrapper slider">
       <dl class="reviews__list slider__list">
         <div class="reviews__item slider__item">
-          <dt class="reviews__info">Николай Петров</dt>
+          <dt class="reviews__author">Николай Петров</dt>
+          <p class="reviews__author-info">25 лет, водитель трамвая</p>
           <dd class="reviews__text">
             Это приложение перевернуло мой мир
             и позволило по-новому вглянуть на
@@ -106,7 +131,7 @@
           </dd>
         </div>
         <div class="reviews__item slider__item">
-          <dt class="reviews__info">Николай Петров</dt>
+          <dt class="reviews__author">Николай Петров</dt>
           <dd class="reviews__text">
             Это приложение перевернуло мой мир
             и позволило по-новому вглянуть на
@@ -116,17 +141,7 @@
           </dd>
         </div>
         <div class="reviews__item slider__item">
-          <dt class="reviews__info">Николай Петров</dt>
-          <dd class="reviews__text">
-            Это приложение перевернуло мой мир
-            и позволило по-новому вглянуть на
-            привычные серые вещи! А еще я
-            познакомился со своей будущей женой
-            в комментариях к выложенной фотографии!
-          </dd>
-        </div>
-        <div class="reviews__item slider__item">
-          <dt class="reviews__info">Николай Петров</dt>
+          <dt class="reviews__author">Николай Петров</dt>
           <dd class="reviews__text">
             Это приложение перевернуло мой мир
             и позволило по-новому вглянуть на
@@ -147,47 +162,33 @@
     <h2 class="visually-hidden">Стоимость</h2>
     <div class="price__wrapper slider">
       <div class="price__inner slider__list">
-        <table class="price__table slider__item">
+        <table class="price__table">
+          <tbody>
           <tr>
-            <th><span>СТАНДАРТ</span><span>3,99 USD</span></th>
+            <th></th>
+            <th>БАЗА</br>1,99 USD</th>
+            <th>СТАНДАРТ</br>3,99 USD</th>
+            <th>АНЛИМ9,</br>99 USD</th>
           </tr>
           <tr>
+            <td>Розовый фильтр</td>
+            <td><img src="img/yes.svg" alt="да"></td>
             <td><span>Розовый фильтр</span><img src="img/yes.svg" alt="да"></td>
+            <td><img src="img/yes.svg" alt="да"></td>
           </tr>
           <tr>
+            <td>Смайлики</td>
+            <td><img src="img/no.svg" alt="нет"></td>
             <td><span>Смайлики</span><img src="img/yes.svg" alt="да"></td>
+            <td><img src="img/yes.svg" alt="да"></td>
           </tr>
           <tr>
+            <td>Комментарии</td>
+            <td><img src="img/no.svg" alt="нет"></td>
             <td><span>Комментарии</span><img src="img/no.svg" alt="нет"></td>
+            <td><img src="img/yes.svg" alt="да"></td>
           </tr>
-        </table>
-        <table class="price__table slider__item">
-          <tr>
-            <td><span>БАЗА</span><span>1,99 USD</span></td>
-          </tr>
-          <tr>
-            <td><span>Розовый фильтр</span><img src="img/yes.svg" alt="да"></td>
-          </tr>
-          <tr>
-            <td><span>Смайлики</span><img src="img/no.svg" alt="нет"></td>
-          </tr>
-          <tr>
-            <td><span>Комментарии</span><img src="img/no.svg" alt="нет"></td>
-          </tr>
-        </table>
-        <table class="price__table slider__item">
-          <tr>
-            <td><span>АНЛИМ</span><span>9,99 USD</span></td>
-          </tr>
-          <tr>
-            <td><span>Розовый фильтр</span><img src="img/yes.svg" alt="да"></td>
-          </tr>
-          <tr>
-            <td><span>Смайлики</span><img src="img/yes.svg" alt="да"></td>
-          </tr>
-          <tr>
-            <td><span>Комментарии</span><img src="img/yes.svg" alt="да"></td>
-          </tr>
+        </tbody>
         </table>
       </div>
       <p class="reviews__toggles slider__toggles">
@@ -219,15 +220,15 @@
           ул. Большая Конюшенная, 19/8
         </div>
       </div>
-      <div class="contacts__map"><img src="img/map.svg" width="320" height="200" alt=""></div>
+      <div class="contacts__map"></div>
+      <div class="contacts__map-point"></div>
     </div>
   </section>
   <section class="page-footer">
     <h2 class="visually-hidden">Контакты</h2>
     <div class="page-footer__wrapper">
       <a class="page-footer__logo" href="index.html">
-        <img class="page-footer__logo-icon" src="img/logotype-blue-tablet.svg" width="145" height="40"
-             alt="логотип пинк">
+        <img class="page-footer__logo-icon" src="img/logotype-blue-tablet.svg" width="145" height="40" alt="логотип пинк">
       </a>
       <div class="page-footer__social">
         <a class="page-footer__social-border" href="#">
